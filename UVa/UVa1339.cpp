@@ -13,14 +13,15 @@
 char input1[110];
 char input2[110];
 
-char counter1[30];
-char counter2[30];
+int counter1[30];
+int counter2[30];
 
 using namespace std;
 
 int cmp( const void *a, const void *b){
     return (*(int *)a - *(int *)b);
 }
+
 
 int main(){
 
@@ -42,11 +43,11 @@ int main(){
         }
 
 
-        //qsort(counter1,26, sizeof(int), cmp);
-        //qsort(counter2,26, sizeof(int), cmp);
+        qsort(counter1,26, sizeof(int), cmp);
+        qsort(counter2,26, sizeof(int), cmp);
 
-        sort(counter1,counter1+26);
-        sort(counter2,counter2+26);
+        //sort(counter1,counter1+26);
+        //sort(counter2,counter2+26);
 
 
         int ans = 1;
